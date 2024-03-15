@@ -1,0 +1,32 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+#sidebar{
+  background: $bg-color;
+  flex: 1 1 0;
+  border-radius: $container-border-radius;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding-block: 3rem;
+
+  img{
+    max-width: 70%;
+    border-radius: $card-border-radius;
+    margin-top: -6rem;
+  }
+
+  .title{
+    color: $text-color-secondary;
+    background: $bg-color-secondary;
+    border-radius: $card-border-radius;
+    margin-top: 4rem;
+    padding: .8rem 1.4rem;
+  }
+
+  .btn{
+    @include btn;
+  }
+}

@@ -1,0 +1,49 @@
+@use './variables' as *;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: $font-body;
+}
+
+body{
+  font-size: 1.6rem;
+  background: $body-bg-color;
+  color: $text-color;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a, svg, button{
+  transition: all .3s ease-in-out;
+}
+
+button{
+  cursor: pointer;
+  padding: .4rem 1.4rem;
+  background: transparent;
+  color: $text-color;
+  display: inline-block;
+}
+
+button, input, textarea, select{
+  font-family: $font-body;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+ul, li{
+  list-style: none;
+}
