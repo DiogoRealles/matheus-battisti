@@ -12,7 +12,7 @@
 
 # ⚡ Overview
 
-<b>Electrum:</b> Objetivo do projeto foi criar uma página responsiva para uma loja de eletrôinicos, desenvolvida com as technologias:<br />
+<b>Electrum:</b> Objetivo do projeto foi criar uma página responsiva para uma loja de eletrônicos, desenvolvida com as technologias:<br />
 <b>HTML5</b> | <b>CSS3</b> | <b>JavaScript</b> | <b>SASS</b> e métodologia <b>BEM</b>.
 <br /><br />
 
