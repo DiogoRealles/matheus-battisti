@@ -1,0 +1,23 @@
+<div class="container">
+  <a href="/books" class="">Voltar</a>
+
+  <form class="form" action="/books/updatebook" method='POST'>
+    <h1 class='form_title'>Edite seu livro:</h1>
+    
+    <input type="hidden" name="id" value='{{book.id}}' />
+    
+    <div class="form_group">
+      <input id='title' class="form_control" type="text" name='title' placeholder='Digite um título' value="{{book.title}}" />
+       
+    </div>
+
+    <div class="form_group">
+      <input id='pagesqty' class="form_control" type="text" name='pagesqty' placeholder='Digite o número de 
+      pastas' value="{{book.pagesqty}}" />
+    </div>
+
+    <div class="form_group">
+      <button class='form_btn' type="submit">Salvar</button>
+    </div>
+  </form>
+</div>

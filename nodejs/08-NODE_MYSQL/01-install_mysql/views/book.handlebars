@@ -1,0 +1,12 @@
+<div class="container">
+  <a href="/books" class="">Voltar</a>
+  
+  <h1 class="">{{book.title}}</h1>
+  <p>Este livro tem {{book.pagesqty}} páginas.</p>
+  
+    <a href='/books/edit/{{book.id}}'>Editar</a>
+
+    <form action='/books/remove/{{book.id}}' method='POST'>
+      <input type="submit" value="Remover" />
+    </form>
+</div>

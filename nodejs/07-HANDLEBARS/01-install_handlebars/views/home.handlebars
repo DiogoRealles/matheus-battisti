@@ -1,0 +1,104 @@
+<section class="">
+  <div class="container">
+    <h1>Hello World - NodeJS + Handlebars</h1>
+    <p>Algum texto do site...</p>
+  </div>
+</section>
+
+<section class="">
+  <div class="container">
+    <h2 class="">Renderizando variável</h2>
+    <div class="">
+      <p>Cor favorita: {{colorFavorite}}</p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="">
+  <div class="container">
+    <h2 class="">Renderizando objeto</h2>
+    <div class="">
+      <p>Nome: {{user.name}} {{user.surname}}</p>
+      <p>Profissão: {{user.role}}</p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="">
+  <div class="container">
+    <h2 class="">Renderizando condicionais (if)</h2>
+    <div class="">
+      <p>
+        {{#if auth1}}
+          Você está autenticado, <a href="/dashboard">clique aqui</a> para acessar a área de mebros!
+        {{/if}}
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="">
+  <div class="container">
+    <h2 class="">Renderizando condicionais (if / else if)</h2>
+    <div class="">
+      <p>
+        {{#if auth2}}
+          Você está autenticado, <a href="/dashboard">clique aqui</a> para acessar a área de mebros!
+
+          {{else}}
+          Você não está autenticado, <a href="/signin">clique aqui</a> para fazer login
+        {{/if}}
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="">
+  <div class="container">
+    <h2 class="">Estrutura de repetição (array simple)</h2>
+    <div class="">
+      {{#each fruits}}
+      {{this}},
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="">
+  <div class="container">
+    <h2 class="">Estrutura de repetição (array objects)</h2>
+    <div class="">
+      {{#each products}}
+      <strong>{{this.name}}</strong><br />
+      <small>R$ {{this.price}}</small><br /><br />
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="">
+  <div class="container">
+    <h2 class="">Renderizando objeto (with)</h2>
+    <div class="">
+      {{#with car1}}
+      <strong>Brand:</strong> <span>{{brand}}</span><br />
+      <strong>Model:</strong> <span>{{model}}</span><br />
+      <strong>Whells:</strong> <span>{{whells}}</span><br />
+      <strong>U$:</strong> <span>{{price}}</span><br />
+      <strong>Color:</strong> <span>{{color}}</span><br />
+      {{/with}}
+    </div>
+  </div>
+</section>

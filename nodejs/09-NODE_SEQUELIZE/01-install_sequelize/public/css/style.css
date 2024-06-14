@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #101010;
+  color: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+nav {
+  padding-block: 24px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  a {
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 8px;
+    }
+  }
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+.border-b {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  margin: 8px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p,
+strong,
+small,
+span {
+  color: #dedede;
+}
+
+/* FORM */
+.form {
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
+
+  .form_title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .form_group {
+    margin-bottom: 8px;
+  }
+
+  .form_label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .form_control {
+    border: none;
+    border: 1px solid #fff2;
+    width: 100%;
+    padding: 14px 8px;
+    background: #fff1;
+    outline: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-bottom: 18px;
+
+    &:is(:hover, :focus) {
+      transition: all 0.3s ease-in-out;
+      border-color: #f1f1f1;
+    }
+  }
+
+  .form_btn {
+    border: 2px solid #f1f1f1;
+    background: #101010;
+    color: #f1f1f1;
+    padding: 14px 32px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      background: #f1f1f1;
+      color: #101010;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  padding-block: 16px;
+  text-align: center;
+}
+
+.item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  flex: 1 1 29%;
+  max-width: 29%;
+  margin-block: 16px;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn {
+  display: inline-block;
+  padding: 4px 16px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  border-color: #721c24;
+  color: #721c24;
+}

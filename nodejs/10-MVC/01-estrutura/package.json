@@ -1,0 +1,18 @@
+{
+  "name": "01-estrutura",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "node --watch --no-warnings ./server.js"
+  },
+  "keywords": [],
+  "author": "Diogo Realles <diogorealles@hotmail.com> (https://diogorealles.github.io/)",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "mysql2": "^3.10.0",
+    "sequelize": "^6.37.3"
+  }
+}
