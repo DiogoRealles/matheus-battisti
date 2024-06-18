@@ -1,0 +1,12 @@
+{
+  "name": "01-intro-scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch-js": "node --watch --warnings ./index.js"
+  },
+  "keywords": [],
+  "author": "Diogo Realles <diogorealles@hotmail.com> (https://diogorealles.github.io/)",
+  "license": "MIT",
+  "description": ""
+}
