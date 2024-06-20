@@ -60,7 +60,6 @@ server.use('/toughts', toughtsRoutes);
 server.get('/', ToughtController.showToughts);
 
 server.use('/', authRoutes);
-// server.use('/register', AuthController.register);
 
 conn
   .sync()
