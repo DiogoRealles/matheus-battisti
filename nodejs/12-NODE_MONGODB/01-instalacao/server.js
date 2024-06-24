@@ -7,9 +7,13 @@ const server = express();
 
 const conn = require('./db/conn');
 
+const productsRouter = require('./routes/productsRoutes');
+
 server.engine('handlebars', exphbs.engine());
 
 server.set('view engine', 'handlebars');
+
+server.use(express.static('public'));
 
 server.use(
   express.urlencoded({
@@ -18,6 +22,8 @@ server.use(
 );
 
 server.use(express.json());
+
+server.use('/products', productsRouter);
 
 server.listen(PORT, () => {
   console.log(`Server running at: http://localhost:${PORT}`);
