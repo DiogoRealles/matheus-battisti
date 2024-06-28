@@ -19,11 +19,9 @@ const ToughtController = require('./controllers/ToughtController');
 const AuthController = require('./controllers/AuthController');
 
 server.use(express.static('public'));
-
 server.engine('handlebars', exphbs.engine());
 server.set('view engine', 'handlebars');
 server.use(express.urlencoded({ extend: true }));
-
 server.use(express.json());
 
 server.use(

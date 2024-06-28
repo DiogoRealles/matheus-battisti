@@ -9,18 +9,10 @@ const conn = require('./db/conn');
 
 const productsRouter = require('./routes/productsRoutes');
 
-server.engine('handlebars', exphbs.engine());
-
-server.set('view engine', 'handlebars');
-
 server.use(express.static('public'));
-
-server.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
-
+server.engine('handlebars', exphbs.engine());
+server.set('view engine', 'handlebars');
+server.use(express.urlencoded({ extend: true }));
 server.use(express.json());
 
 server.use('/products', productsRouter);
