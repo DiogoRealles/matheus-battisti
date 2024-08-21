@@ -40,7 +40,7 @@
 
   <p>
     No projeto Agência X é colocado em prática tudo que foi aprendido ao longo do curso. <br />
-    Elementos semânticos do HTML5, Acessibilidade, SEO, Boa práticas, CSS3 com flexbox, Css Grid, Animations e muito mais. <br />
+    Elementos semânticos do HTML5, Acessibilidade, SEO, Boas práticas, CSS3 com flexbox, Css Grid, Animations e muito mais. <br />
   </p>
   <br /> <br />
 
