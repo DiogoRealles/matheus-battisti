@@ -1,0 +1,50 @@
+body {
+  background: #101010;
+  color: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+nav {
+  padding-block: 24px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  a {
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 8px;
+    }
+  }
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+p,
+strong,
+small,
+span {
+  color: #dedede;
+}
+
+.footer {
+  padding-block: 16px;
+  text-align: center;
+}

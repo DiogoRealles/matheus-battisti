@@ -1,0 +1,15 @@
+{
+  "name": "11-",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Diogo Realles <diogorealles@hotmail.com> (https://diogorealles.github.io/)",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}

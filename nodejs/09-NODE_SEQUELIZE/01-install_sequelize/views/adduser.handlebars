@@ -1,0 +1,47 @@
+<section class=''>
+  <div class='container'>
+
+    <form class='form' action='/users/create' method='POST'>
+      <h1 class='form_title'>Adicione um usuário</h1>
+      <div class='form_group'>
+        <label for='name' class='form_label'>
+          Nome
+        </label>
+        <input
+          class='form_control'
+          id='name'
+          type='text'
+          name='name'
+          placeholder='Digite o nome do usuário'
+        />
+      </div>
+      <div class='form_group'>
+        <label for='occupation' class='form_label'>
+          Ocupação
+        </label>
+        <input
+          class='form_control'
+          id='occupation'
+          type='text'
+          name='occupation'
+          placeholder='Digite o nome do usuário'
+        />
+      </div>
+      <div class='form_group form_checkbox'>
+        <input
+          class=''
+          id='newsletter'
+          type='checkbox'
+          name='newsletter'
+          checked
+        />
+        <label for='newsletter' class='form_label'>
+          Enviar promoções?
+        </label>
+      </div>
+      <div class='form_group'>
+        <button class='form_btn' type='submit'>Cadastrar</button>
+      </div>
+    </form>
+  </div>
+</section>

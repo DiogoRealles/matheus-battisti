@@ -1,0 +1,37 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+#social-networks{
+  @include center;
+  gap: 1.6rem;
+  margin-block: 2.4rem;
+
+  .social-btn{
+    padding: 1.8rem;
+    background: $bg-color-secondary;
+    border-radius: $card-border-radius;
+    color: $grey-300;
+    font-size: 2.4rem;
+    @include center;
+
+    &:hover{
+      background: $gradient;
+
+      > svg {
+        color: $text-color;
+      }
+    }
+  }
+
+  #linkedin{
+    color: $linkedin;
+  }
+
+  #github{
+    color: $github;
+  }
+
+  #instagram{
+    color: $instagram;
+  }
+}

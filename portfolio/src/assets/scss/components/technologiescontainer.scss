@@ -1,0 +1,55 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+
+.technologies-container{
+  margin-bottom: 1.6rem;
+  
+  .technologies-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .technology-card{
+    @include center;
+    gap: 1.6rem;
+    padding: 1.6rem;
+    border: .1rem solid $grey-300;
+    width: 45%;
+    border-radius: $card-border-radius;
+    
+    h3{
+      color: $text-color;
+      margin-bottom: 1rem;
+    }
+
+    svg{
+      font-size: 6rem;
+    }
+  }
+
+  #html svg{
+    color: $html;
+  }
+
+  #css svg{
+    color: $css;
+  }
+
+  #js svg{
+    color: $js;
+  }
+
+  #node svg{
+    color: $node;
+  }
+
+  #mysql svg{
+    color: $mysql;
+  }
+
+  #react svg{
+    color: $react;
+  }
+}

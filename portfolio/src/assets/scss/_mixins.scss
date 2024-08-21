@@ -1,0 +1,22 @@
+@use './variables' as *;
+
+@mixin center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin btn{
+  padding: 1rem 1.4rem;
+  color: $text-color;
+  background: $gradient;
+  text-decoration: none;
+  border-radius: 3.2rem;
+}
+
+@mixin gradient-border{
+  content: '';
+  background: $gradient;
+  height: .4rem;
+  width: 30%;
+}
