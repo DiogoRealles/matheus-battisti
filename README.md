@@ -185,17 +185,17 @@
   Curso básico de <b>NextJS + TailwindCSS</b>. <br />
 
 - **Fundamentos do React / NextJS + TailwindCSS** <br />
-- **Vite, Components, props, children, hooks** <br />
-- **CSS / styled-components** <br />
-- **React Router DOM** <br />
-- **React Form + Yup** <br />
-- **Consumindo AOI** <br />
-- **Intro a estrutura de pastas** <br />
-- **Rotas** <br />
-- **Server-components** <br />
+- **Introdução a estrutura de pastas** <br />
+- **Rotas e páginas no NextJS** <br />
+- **Server components** <br />
+- **Meta tags no NextJS** <br />
+- **Assets (Imagens e vídeos)** <br />
+- **Consumindo APIs** <br />
 - **SSG, CRC, SSC** <br />
-- **Configurando TailwindCSS e Fundamentos** <br />
+- **Configurando TailwindCSS no NextJS** <br />
 - **Mobile first e media queries** <br />
+- **NextJS + Git e GitHUB** <br />
+- **Deploy do projeto em NextJS na Vercel** <br />
 </p>
 
 ## PROJETOS
