@@ -200,7 +200,7 @@
 
 ## PROJETOS
 
-## PokéAPI
+## PokéNextJS
 
 <p>
   Listagem de Pokémons via API, práticando conceitos aprendidos neste módulo. <br />
