@@ -1,12 +1,15 @@
+const chalk = require('chalk');
 const express = require('express');
-const PORT = 3333;
-
 const server = express();
+
+const PORT = process.env.PORT;
 
 server.get('/', (req, res) => {
   res.send('Hello World - Express');
 });
 
 server.listen(PORT, () => {
-  console.log(`Server running at port: http://localhost:${PORT}`);
+  console.log(
+    chalk.bgGreen.black(`Server running at: http://localhost:${PORT}`)
+  );
 });
