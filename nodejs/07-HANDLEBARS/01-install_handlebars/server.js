@@ -1,8 +1,14 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const server = express();
-const PORT = 3333;
 
+const PORT = process.env.PORT;
+
+const hbs = exphbs.create({
+  partialsDir: ['views/partials'],
+});
+
+// server.engine('handlebars', exphbs.engine);
 server.engine('handlebars', exphbs.engine());
 
 server.set('view engine', 'handlebars');
@@ -52,14 +58,43 @@ server.get('/', (req, res) => {
     color: 'white',
   };
 
+  // Rendering partials
+  const posts = [
+    {
+      thumb:
+        'https://openwebsolutions.in/blog/wp-content/uploads/2018/01/banner-1.jpg',
+      title: 'Aprender HTML + CSS',
+      category: 'HTML',
+      body: 'HTML5 é uma tecnologia para desenvolvimento de pro projetos web lorem ipsum dollor ammet...',
+      comments: 4,
+    },
+    {
+      thumb:
+        'https://www.configuroweb.com/wp-content/uploads/2024/02/Creando-un-Generador-de-Imagenes-con-IA-Utilizando-HTML-CSS-y-JavaScript.webp',
+      title: 'Aprender AI',
+      category: 'AI',
+      body: 'Crie projetos mais rápidos com o poder das IAs lorem ipsum dollor ammet...',
+      comments: 4,
+    },
+    {
+      thumb:
+        'https://blog.geekhunter.com.br/wp-content/uploads/2021/02/1_mp91A9RzagntGGjBnwu4Yw.png',
+      title: 'Aprender NodeJS',
+      category: 'NodeJS',
+      body: 'Aprender NodeJS te possibilitar ser um Dev fullStack lorem ipsum dollor ammet...',
+      comments: 4,
+    },
+  ];
+
   res.render('home', {
-    user,
     colorFavorite,
+    user,
     auth1,
     auth2,
     fruits,
     products,
     car1,
+    posts,
   });
 });
 
@@ -80,5 +115,5 @@ server.use((req, res, next) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Server running at port http://localhost:${PORT}`);
+  console.log(`Server running at: http://localhost:${PORT}`);
 });

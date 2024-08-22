@@ -8,6 +8,21 @@ a {
   color: inherit;
 }
 
+a {
+  text-align: center;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+  }
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
 ul,
 li {
   list-style: none;
@@ -21,15 +36,6 @@ nav {
     justify-content: center;
     gap: 16px;
   }
-
-  a {
-    text-align: center;
-
-    &:hover {
-      text-decoration: underline;
-      text-underline-offset: 8px;
-    }
-  }
 }
 
 .container {
@@ -42,6 +48,45 @@ strong,
 small,
 span {
   color: #dedede;
+}
+
+.cards {
+  display: flex;
+  gap: 16px;
+
+  .card {
+    flex: 1;
+    background: #fff1;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+
+    & .thumb {
+      width: 100%;
+      height: 196px;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    & .body {
+      padding: 4px 16px;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      span {
+        display: inline-block;
+        font-size: 14px;
+      }
+
+      p {
+        color: #fff9;
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .footer {
