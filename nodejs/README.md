@@ -14,25 +14,28 @@
 <details>
   <summary>O que é NPM - Node Package Manager</summary>
   É um gerenciador de pacotes do NodeJS. Possibilita instalar, atualizar e remover pacotes nos projetos. <br />
-  <b>package.json:</b> É um arquivo que guarda informações do projetos como: <br />
-  - Nome, Autor, versão, pacotes/módulos necessários para o funcionamento do projeto. <br />
+  <b>package.json:</b> É um arquivo que guarda informações do projeto como: <br />
+  - Nome, autor, versão, pacotes/módulos necessários para o funcionamento do projeto. <br />
   Permite executar determinados scripts nos projetos. <br />
-  
-  Comando para iniciar um projeto em NodeJS: <br />
+
+Comando para iniciar um projeto em NodeJS: <br />
+
   <pre>
     <code>
       npm init -y
     </code>
   </pre>
-  
-  Comando para instalar pacote local: <br />
+
+Comando para instalar pacote local: <br />
+
   <pre>
     <code>
       npm i name_package
     </code>
   </pre>
-  
-  Comando para instalar pacote de desenvolvimento: <br />
+
+Comando para instalar pacote de desenvolvimento: <br />
+
   <pre>
     <code>
       npm i -D name_package
@@ -46,9 +49,9 @@
   <summary>O que são módulos</summary>
   São conjuntos de códigos e funções "empacotados". Ou seja são scripts reaproveitáveis e precisam ser exportados (module.exports) e importados (require) onde necessário. <br />
   São divididos em 3 categorias: <br />
-  Módulos Internos: São módulos desenvolvidos e utilizados no projeto. <br />
-  Core Modules: São módulos pertencentes ao próprio NodeJS. <br />
-  Módulos Externos: são módulos de terceiros, instalados e gerenciados pelo NPM. <br />
+  <b>Módulos Internos:</b> São módulos desenvolvidos e utilizados no projeto. <br />
+  <b>Core Modules:</b> São módulos pertencentes ao próprio NodeJS. <br />
+  <b>Módulos Externos:</b> são módulos de terceiros, instalados e gerenciados pelo NPM. <br />
 </details>
 <br />
 
@@ -65,11 +68,11 @@
   <summary>Core Modules</summary>
   São arquivos prontos e internos do NodeJS. <br />
   NodeJS possui muitos módulos para diversas necessidades:
-  FS, MKDIR - Trabalhar com arquivos (criar, ler, escrever e deletar) e diretórios. <br />
-  HTTP - Utilizado para criar servidores. Podendo capturar dados tanto do front quanto retornar pro front dados do back-end. <br />
-  PATH - Utilizado para caminhos, nomes e extenção de pastas e arquivos. <br />
-  OS - Utilizado para saber dados e informa;'oes do sistema (OS, processador, mem[oria, etc]). <br />
-  URL - Utilizado para trabalhar com URLs. <br />
+  <b>FS, MKDIR -</b> Trabalhar com arquivos (criar, ler, escrever e deletar) e diretórios. <br />
+  <b>HTTP -</b> Utilizado para criar servidores. Podendo capturar dados tanto do front quanto retornar pro front dados do back-end. <br />
+  <b>PATH -</b> Utilizado para caminhos, nomes e extenção de pastas e arquivos. <br />
+  <b>OS -</b> Utilizado para saber dados e informações do sistema (OS, processador, memória, etc). <br />
+  <b>URL -</b> Utilizado para trabalhar com URLs. <br />
   Os módulos precisam ser importados onde necessário. <br />
 </details>
 <br />
@@ -115,6 +118,40 @@
       npm i express-handlebars
     </code>
   </pre>
+</details>
+<br />
+
+<details>
+  <summary>O que é MySQL</summary>
+  É um SGBD que auxilia a trabalhar com DB relacionais. <br />
+  É necessário baixar e usar drive para conectar o NodeJS e Express ao SGBD. <br />
+  
+  Instalando mysql para NodeJS: <br />
+  <pre>
+    <code>
+      npm i mysql
+    </code>
+  </pre>
+  
+  Queries SQL: <br />
+  <b>CREATE DATABASE 'DATABASE_NAME':</b> Comando para criar banco de dados. <br />
+  <b>CREATE TABLE 'TABLE_NAME'():</b> Comando para criar tabela. Recebe como parâmetros os campos de dados. <br />
+  <b>INSERT:</b> Comando para inserir dados na tabela. <br />
+  <b>SELECT:</b> Comando para selecionar dados da tabela. <br />
+  <b>UPDATE:</b> Comando para atualizar dados na tabela. <br />
+  <b>ALTER:</b> Comando para alterar a tabela ou banco existente. <br />
+  <b>DELETE:</b> Comando para deletar dado na tabela. É necessário utilizar propriedade WHERE para deletar dado expecífico. <br />
+  <b>DROP:</b> Comando para deletar a tabela ou banco existente. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que são bancos de dados relacionais</summary>
+  São utilizados para guardar dados. Suas caracteristicas são: <br />
+  <b>Tabelas:</b> Onde os dados são inseridos e organizados. <br />
+  <b>Colunas:</b> Onde os dados inseridos são categorizados. <br />
+  <b>Dados:</b> O que é inserido, atualizado e removido em uma tabela. <br />
+  <b>Relacionamentos:</b> Ligação entre as tabelas. <br />
 </details>
 <br />
 
