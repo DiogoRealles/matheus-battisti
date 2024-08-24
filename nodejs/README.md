@@ -18,14 +18,26 @@
   - Nome, Autor, versão, pacotes/módulos necessários para o funcionamento do projeto. <br />
   Permite executar determinados scripts nos projetos. <br />
   
-  Comando para iniciar um projeto em NodeJS:<br />
-  `npm init -y`<br />
+  Comando para iniciar um projeto em NodeJS: <br />
+  <pre>
+    <code>
+      npm init -y
+    </code>
+  </pre>
   
-  Comando para instalar pacote local:<br />
-  `npm i name_package`<br />
+  Comando para instalar pacote local: <br />
+  <pre>
+    <code>
+      npm i name_package
+    </code>
+  </pre>
   
-  Comando para instalar pacote de desenvolvimento:<br />
-  `npm i -D name_package`<br />
+  Comando para instalar pacote de desenvolvimento: <br />
+  <pre>
+    <code>
+      npm i -D name_package
+    </code>
+  </pre>
 
 </details>
 <br />
@@ -98,6 +110,56 @@
   {{userage}} => 35 <br />
   
   Instalando handlebars para Express: <br />
-  `npm i express-handlebars` <br />
+  <pre>
+    <code>
+      npm i express-handlebars
+    </code>
+  </pre>
+</details>
+<br />
+
+<details>
+  <summary>O que são ORMs (Object Relational Mapping)</summary>
+  São frameworks para banco de dados relacionais que abstraem as complexidade das queries em métodos. <br />
+  Auxilia facilitando na integração e criação de queries (INPUT, SELECT, UPDATE, DELETE) via métodos. <br />
+  O Dev se concentra mais nas regras de negócio e menos nos comandos SQL, otimizando o desenvolvimento. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é Sequelize</summary>
+  É uma ORM (Object Relacional Mapping) / framework para nodeJS. <br />
+  É baseado em promisses (then, catch). <br />
+  É preciso criar uma classe / Model. <br />
+  
+  Instalando Sequelize no NodeJS com MySQL: <br />
+  <pre>
+    <code>
+      npm i mysql2 sequelize
+    </code>
+  </pre>
+  
+  Conectar no banco com Sequelize: <br />
+  <pre>
+    <code>
+      const sequelize = new Sequelize('database_name', 'root', '', {
+        host: 'localhost',
+        dialect: 'mysql',
+      });
+    </code>
+  </pre>
+  Model: É uma abstração que representará uma tabela, é instanciada por uma classe. <br />
+  Os campos e tipos são as propriedades do Model. <br />
+  
+  Métodos Sequelize: <br />
+  <b>sync():</b> Método para criar tabelas baseadas no model. { force: true } recria a tabela zerada. <br />
+  <b>create():</b> Método para inserir dados na tabela. <br />
+  <b>fetchAll():</b> Método para seleciona dados da tabela, os dados vem em object, sendo necessário um parâmetro <b>{ raw: true }</b> para converter em array de object. <br />
+  <b>findOne():</b> Método para selecionar um dado expecifico da tabela, sendo necessário um parâmetro <b>{ where: {id: id} }</b> para filtragem do dado expecifico. <br />
+  <b>destroy():</b> Método para remover dados da tabela, sendo necessário um parâmetro <b>{ where: {id: id} }</b> para filtragem do dado expecifico. <br />
+  <b>update():</b> Método para atualizar dados da tabela, sendo necessário um parâmetro <b>{ where: {id: id} }</b> para filtragem do dado expecifico. <br />
+  Atualização é feito em duas partes: <br />
+  1 - Selecionar os dados com findOne para preencher o formulário com os dados selecionados. <br />
+  2 - Método update recebe os dados selecionados como objet. <br />
 </details>
 <br />

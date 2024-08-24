@@ -5,7 +5,7 @@ const User = require('./models/User');
 const Address = require('./models/Address');
 
 const server = express();
-const PORT = 3333;
+const PORT = process.env.PORT;
 
 server.use(
   express.urlencoded({
@@ -138,6 +138,7 @@ conn
   // .sync({ force: true })
   .then(() => {
     server.listen(PORT, () => {
-      console.log(`Server running at port: http://localhost:${PORT}`);
+      console.log(`Server running at: http://localhost:${PORT}`);
     });
-  });
+  })
+  .catch((error) => console.log(error));

@@ -4,7 +4,7 @@ const exphbs = require('express-handlebars');
 const pool = require('./db/conn');
 
 const server = express();
-const PORT = 3333;
+const PORT = process.env.PORT;
 
 server.use(
   express.urlencoded({
@@ -146,5 +146,5 @@ server.post('/books/remove/:id', (req, res) => {
 
 // CONNECTION VIA POOL
 server.listen(PORT, () => {
-  console.log(`Server running at port: http://localhost:${PORT}`);
+  console.log(`Server running at: http://localhost:${PORT}`);
 });
