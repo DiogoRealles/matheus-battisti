@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "server": "node --watch --no-warnings ./server.js"
+    "server": "node --watch --no-warnings --env-file=.env ./server.js"
   },
   "keywords": [],
   "author": "Diogo Realles <diogorealles@hotmail.com> (https://diogorealles.github.io/)",

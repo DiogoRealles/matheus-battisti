@@ -28,11 +28,11 @@
     Aprenda a estilizar seus sites de forma profissional com as principais regras e features de CSS3. <br />
   </p>
   
-- **Introdução ao HTML5 + CSS3 com Flexbox e CSS Grid, Animações e Transições** <br />
+- **Introdução ao HTML5 + CSS3 com Flexbox e CSS3 com Grid, Animações e Transições** <br />
 - **Meta tags de compartilhamento e Técnicas de SEO** <br />
 - **Acessibilidades** <br />
 - **Básico de Git e GitHUB** <br />
-- **Deploy do projeto em GitHUB pags** <br />
+- **Deploy do projeto em GitHUB pages** <br />
 
 ## PROJETOS
 
@@ -40,7 +40,7 @@
 
   <p>
     No projeto Agência X é colocado em prática tudo que foi aprendido ao longo do curso. <br />
-    Elementos semânticos do HTML5, Acessibilidade, SEO, Boas práticas, CSS3 com flexbox, Css Grid, Animations e muito mais. <br />
+    Elementos semânticos do HTML5, Acessibilidade, SEO, Boas práticas, CSS3 com flexbox, CSS3 com Grid, Animations e muito mais. <br />
   </p>
   <br /> <br />
 

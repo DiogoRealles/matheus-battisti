@@ -3,7 +3,7 @@ const exphbs = require('express-handlebars');
 const conn = require('./db/conn');
 
 const server = express();
-const PORT = 3333;
+const PORT = process.env.PORT;
 
 const Task = require('./models/Task');
 
@@ -30,6 +30,7 @@ conn
   // .sync({ force: true })
   .then(() => {
     server.listen(PORT, () => {
-      console.log(`Server running at port: http://localhost:${PORT}`);
+      console.log(`Server running at: http://localhost:${PORT}`);
     });
-  });
+  })
+  .catch((error) => console.log(error));

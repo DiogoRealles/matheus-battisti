@@ -17,8 +17,7 @@
   <b>package.json:</b> É um arquivo que guarda informações do projeto como: <br />
   - Nome, autor, versão, pacotes/módulos necessários para o funcionamento do projeto. <br />
   Permite executar determinados scripts nos projetos. <br />
-
-Comando para iniciar um projeto em NodeJS: <br />
+  Comando para iniciar um projeto em NodeJS: <br />
 
   <pre>
     <code>
@@ -198,5 +197,22 @@ Comando para instalar pacote de desenvolvimento: <br />
   Atualização é feito em duas partes: <br />
   1 - Selecionar os dados com findOne para preencher o formulário com os dados selecionados. <br />
   2 - Método update recebe os dados selecionados como objet. <br />
+</details>
+<br />
+
+<details>
+  <summary>MVC - Model View Controller</summary>
+  É um padrão arquitetural de Sistema da Informação, deixa a aplicação mais organizada. A aplicação é dividida em camadas, cada uma com sua responsábilidade. <br />
+
+<b>Models:</b> Responsável por interagir com os dados do DB, criando, selecionando, atualizando e/ou removendo do DB. <br />
+Model passa os dados para serem processados pelo Controller para serem exibidos pela View. <br />
+É comum que cada tabela seja um model. Os Models são quem identificam as regras de negócio do sistema. <br />
+
+<b>Views:</b> Responsável por exibir os dados que recebe do Controller e enviar através de formulários para o Controller os dados para Model. <br />
+
+<b>Controllers:</b> Responsável por fazer o meio de campo entre View e Model é onde ficam as funcionalidades e lógicas da aplicação. <br />
+Define qual view será renderizada, processamento do dados que serão enviados para o banco ou para o front. <br />
+Controllers terão um código semelhante com os das rotas. <br />
+
 </details>
 <br />
