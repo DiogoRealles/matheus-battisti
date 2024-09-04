@@ -216,3 +216,82 @@ Controllers terão um código semelhante com os das rotas. <br />
 
 </details>
 <br />
+
+<details>
+  <summary>O que é NoSQL?</summary>
+  São banco de dados focados em documentos. O relacionamento entra as tabelas é opcional. <br />
+  Não utiliza queries e sim métodos de classes para trabalhar com os dados. <br />
+  As tabelas são substítuidas por Collections. Não é preciso criar a estrutura da collection previamente. <br />
+  MongoDB é um banco NoSQL. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é MongoDB?</summary>
+  É um banco de dados orientado a documento. <br />
+  Os dados são armazenados em estrutura semelhantes com JSON, chamado BSON. <br />
+  Ao invés de PK e FK, utiliza-se indices primário e secundário. <br />
+  NodeJS possui um módulo para conectar aplicação com MongoDB. <br />
+  <b>Database:</b> É onde ficam as Collections e dados. <br />
+  <b>Collections:</b> Onde os dados são inseridos, semelhante a tabelas no MySQL. <br />
+  <b>Documents:</b> São os dados. MongoDB nomeia os dados como documents. <br />
+  Collections podem ser criadas livremente a qualquer momento e não pssuem colunas fixas para os dados. <br />
+</details>
+<br />
+
+<details>
+  <summary>Trabalhando com MongoDB</summary>
+  Instalando módulo / driver do MongoDB. <br />
+
+  <pre>
+    <code>
+      npm i mongodb
+    </code>
+  </pre>
+
+Métodos do MongoDB:. <br />
+<b>insertOne():</b> Método para inserir dados na Collection. <br />
+<b>find():</b> Método para resgatar vários dados na Collection. Necessário converter para array com toArray(). <br />
+<b>findOne():</b> Método para resgatar um dado expecífico na Collection. <br />
+<b>deleteOne():</b> Método para deletar dado na Collection. <br />
+<b>updateOne():</b> Método para atualizar dados na Collection. <br />
+
+</details>
+<br />
+
+<details>
+  <summary>O que são ODMs (Object Data Mapping)</summary>
+  São frameworks para banco de dados não relacionais que abstraem as complexidade das queries em métodos. <br />
+  Auxilia facilitando na integração e criação de queries (INPUT, SELECT, UPDATE, DELETE) via métodos. <br />
+  O Dev se concentra mais nas regras de negócio e menos nos comandos SQL, otimizando o desenvolvimento. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é Mongoose</summary>
+  É uma ODM (Object Data Mapping) / framework para MongoDB. <br />
+  É baseado em promisses (then, catch). <br />
+  É preciso criar uma classe / Model. <br />
+  
+  Instalando Mongoose no NodeJS com MongoDB: <br />
+  <pre>
+    <code>
+      npm i mongoose
+    </code>
+  </pre>
+
+Model / Schema: É uma abstração que representará uma tabela, é instanciada por uma classe. <br />
+Os campos e tipos são as propriedades do Model / Schema. <br />
+
+Métodos Sequelize: <br />
+<b>save():</b> Método para inserir dados na tabela. <br />
+<b>find():</b> Método para seleciona dados da tabela, os dados vem em object, sendo necessário um método auxíliar <b>.lean()</b> para converter em array de object. <br />
+<b>findById(id):</b> Método para selecionar um dado expecifico da tabela, sendo necessário um método auxíliar <b>.lean()</b> para filtragem do dado expecifico. <br />
+<b>updateOne():</b> Método para atualizar dados da tabela, sendo necessário um parâmetro <b>{ \_id: id }</b> para filtragem do dado expecifico. <br />
+Atualização é feito em duas partes: <br />
+1 - Selecionar os dados com updateOne para preencher o formulário com os dados selecionados. <br />
+2 - Método update recebe os dados selecionados como objet. <br />
+<b>deleteOne():</b> Método para remover dados da tabela, sendo necessário um parâmetro <b>{ \_id: id }</b> para filtragem do dado expecifico. <br />
+
+</details>
+<br />
