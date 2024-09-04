@@ -287,11 +287,11 @@ Métodos Sequelize: <br />
 <b>save():</b> Método para inserir dados na tabela. <br />
 <b>find():</b> Método para seleciona dados da tabela, os dados vem em object, sendo necessário um método auxíliar <b>.lean()</b> para converter em array de object. <br />
 <b>findById(id):</b> Método para selecionar um dado expecifico da tabela, sendo necessário um método auxíliar <b>.lean()</b> para filtragem do dado expecifico. <br />
-<b>updateOne():</b> Método para atualizar dados da tabela, sendo necessário um parâmetro <b>{ \_id: id }</b> para filtragem do dado expecifico. <br />
+<b>updateOne():</b> Método para atualizar dados da tabela, sendo necessário um parâmetro <b>{\_id: id }</b> para filtragem do dado expecifico. <br />
 Atualização é feito em duas partes: <br />
 1 - Selecionar os dados com updateOne para preencher o formulário com os dados selecionados. <br />
 2 - Método update recebe os dados selecionados como objet. <br />
-<b>deleteOne():</b> Método para remover dados da tabela, sendo necessário um parâmetro <b>{ \_id: id }</b> para filtragem do dado expecifico. <br />
+<b>deleteOne():</b> Método para remover dados da tabela, sendo necessário um parâmetro <b>{\_id: id }</b> para filtragem do dado expecifico. <br />
 
 </details>
 <br />
