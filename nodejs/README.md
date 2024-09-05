@@ -295,3 +295,78 @@ Atualização é feito em duas partes: <br />
 
 </details>
 <br />
+
+<details>
+  <summary>O que é API (Application Programming Interface) Interface de Programação de Aplicações?</summary>
+  É uma interface / meio de comunicação entre front-end e back-end. É independente do Front-end e é muito rápidp por que geralmente responde em JSON. <br />
+  Geralmente criada com Express e baseada em <b>requisição</b> e <b>resposta</b>. <br />
+  Ex: WhatsApp tem acesso a lista de contatos do celular mesmo não tendo uma lista de contatos própria. <br />
+  Utilizam verbos HTTP (GET, POST, PUT, PATCH, DELETE). <br />
+  APIs que implementam este este padrão são chamadas API RESTful. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que são verbos HTTP?</summary>
+  Estão fortemente ligadas com APIs e fazem parte do REST. Cada um representa uma ação na API e cada rota deve usar os métodos corretos. <br />
+  GET, POST, PUT/PATCH, DELETE. <br />
+  <b>GET:</b> Responsável por resgatar dados. <br />
+  <b>POST:</b> Responsável por enviar dados. <br />
+  <b>PUT:</b> Responsável por atualizar todos os dados. <br />
+  <b>PATCH:</b> Responsável por atualizar parcialmente dos dados. <br />
+  <b>DELETE:</b> Responsável por deletar os dados. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que são status code?</summary>
+  Estão fortemente ligadas com APIs e os verbos HTTPs. Orientam a aplicação exibindo mensagens de sucesso ou erros. <br />
+  Complementam a resposta antes do JSON. <br />
+  É necessário utilizar os status code corretamente. <br />
+  <b>100 - 199:</b> Respostas de informação. <br />
+  <b>200 - 299:</b> Resposta de sucesso. <br />
+  <b>300 - 399:</b> Redirecionamento. <br />
+  <b>400 - 499:</b> Erros do cliente. <br />
+  <b>500 - 599:</b> Erros do servidor. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é REST e RESTful?</summary>
+  REST (Representational State Transfer / Transferência Representacional de Estato). <br />
+  É um estilo/principios de arquitetura, que define como as PIs devem ser criada. <br />
+  Seguindo todos os padrões a API é considerada <b>RESTful</b>. <br />
+  - Não tem ligação com Front-end, ou seja, é independente do Front-end. <br />
+  - Respostas uniformes. <br />
+  - Responde de forma concisas e com status code (200, 300, 400, 500). <br />
+  - Sem ligação de estado. <br />
+  - Mantém cache de respostas. <br />
+  - Facil manutenção. <br />
+  
+</details>
+<br />
+
+<details>
+  <summary>O que é SPA (Single Page Aplication / Aplicação de Página Única)?</summary>
+  Ao contrário do <b>monolito</b> Front-end junto com Back-end, SPA é quando uma página possui Front-end separado do Back-end. <br />
+  Com uma API para o Back-end. <br />
+  Com um framework para o Front-end. <br />
+
+</details>
+<br />
+
+<details>
+  <summary>O que é Postman?</summary>
+  É um client / ferramenta para testes de APIs. Auxilia na criação do back-end antes e separado do Front-end. <br />
+  Permite simular os verbos HTTPs, enviar o corpo da requisição, inserir headers/token e mais. <br />
+  <b>params:</b> É o dado que vem pelos parametros da requisição. <br />
+  meusite.com/products/id=3
+  <b>body:</b> São os dados que vem pelo formulário. <br />
+  name=Diogo. <br />
+  age=35. <br />
+  role=Desenvolvedor Front-end. <br />
+  <b>query string:</b> São o s dados que vem pela URL, e sãousadas para consultas. <br />
+  meusite.com/products/notebook?marca=acer. <br />
+
+</details>
+<br />
