@@ -170,11 +170,6 @@ module.exports = class UserController {
 
     user.password = password;
 
-    // if (!confirmPassword) {
-    //   res.status(422).json({ message: 'A confirmação é obrigatórias!' });
-    //   return;
-    // }
-
     if (password !== confirmPassword) {
       res.status(422).json({
         message: 'A senha e a confirmação de senha precisam ser iguais!',
@@ -199,10 +194,5 @@ module.exports = class UserController {
       res.status(500).json({ message: error });
       return;
     }
-
-    // if (!user) {
-    //   res.status(422).json({ message: 'Usuário não encontrado!' });
-    //   return;
-    // }
   }
 };
