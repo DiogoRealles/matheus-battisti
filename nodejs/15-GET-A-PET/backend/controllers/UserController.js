@@ -154,7 +154,7 @@ module.exports = class UserController {
       return;
     }
 
-    user.email.email;
+    user.email = email;
 
     if (!phone) {
       res.status(422).json({ message: 'O telefone é obrigatório!' });
@@ -163,10 +163,12 @@ module.exports = class UserController {
 
     user.phone = phone;
 
-    // if (!password) {
-    //   res.status(422).json({ message: 'A senha é obrigatória!' });
-    //   return;
-    // }
+    if (!password) {
+      res.status(422).json({ message: 'A senha é obrigatória!' });
+      return;
+    }
+
+    user.password = password;
 
     // if (!confirmPassword) {
     //   res.status(422).json({ message: 'A confirmação é obrigatórias!' });
