@@ -125,7 +125,6 @@ module.exports = class UserController {
   }
 
   static async editUser(req, res) {
-    const { id } = req.params;
     const { name, email, phone, password, confirmPassword } = req.body;
 
     const token = getToken(req);
