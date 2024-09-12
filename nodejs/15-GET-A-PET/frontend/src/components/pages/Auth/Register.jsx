@@ -3,14 +3,23 @@ import styles from '../../form/Form.module.css';
 import { Link } from 'react-router-dom';
 
 import Input from '../../form/Input';
+import { useContext, useState } from 'react';
+
+import { UserContext } from '../../../contexts/UserContext';
 
 const Register = () => {
-  const handleSubmit = () => {
-    //
-  };
+  const { register } = useContext(UserContext);
+
+  const [user, setUser] = useState({});
 
   const handleChange = () => {
-    //
+    setUser({ ...user, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    register(user);
   };
 
   return (
@@ -49,7 +58,7 @@ const Register = () => {
         <Input
           label="Confirmação de senha"
           type="password"
-          name="confirmpassword"
+          name="confirmPassword"
           placeholder="Confirme a sua senha"
           handleOnChange={handleChange}
         />

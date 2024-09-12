@@ -7,23 +7,26 @@ import Register from './components/pages/Auth/Register';
 import Navbar from './components/layouts/Navbar';
 import Footer from './components/layouts/Footer';
 import Container from './components/layouts/Container';
+import { UserContextProvider } from './contexts/UserContext';
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <UserContextProvider>
+        <Navbar />
 
-      <Container>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-        </Routes>
-        <Routes>
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </Container>
+        <Container>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+          </Routes>
+          <Routes>
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </Container>
+      </UserContextProvider>
 
       <Footer />
     </Router>
