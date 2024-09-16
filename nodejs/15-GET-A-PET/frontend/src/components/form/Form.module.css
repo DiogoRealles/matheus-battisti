@@ -41,5 +41,7 @@
 .preview_pet_images img {
   width: 100px;
   height: 100px;
+  vertical-align: middle;
+  object-fit: cover;
   margin-left: 1em;
 }

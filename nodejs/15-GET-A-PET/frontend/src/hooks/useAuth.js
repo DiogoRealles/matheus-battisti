@@ -2,19 +2,87 @@ import api from '../utils/api';
 
 import { useState, useEffect } from 'react';
 
-// import { useHistory } from 'react-router-dom';
+import useFlashMessage from './useFlashMessage';
+
+import { useNavigate } from 'react-router-dom';
 
 export default function useAuth() {
-  async function register(user) {
-    try {
-      const data = await api.post('/users/register', user).then((res) => {
-        return res.data;
-      });
-      console.log(data);
-    } catch (error) {
-      console.log(error);
+  const [authenticated, setAuthenticated] = useState(false);
+
+  const { setFlashMessage } = useFlashMessage();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('getapet-token');
+
+    if (token) {
+      api.defaults.headers.Authorization = `Bearer ${JSON.parse(token)}`;
+
+      setAuthenticated(true);
     }
+  }, []);
+
+  async function register(user) {
+    let msgText = 'Cadastro realizado com sucesso!';
+    let msgType = 'success';
+
+    try {
+      const data = await api.post('/users/register', user).then((response) => {
+        return response.data;
+      });
+
+      await authUser(data);
+    } catch (error) {
+      msgText = error.response.data.message;
+      msgType = 'error';
+    }
+
+    setFlashMessage(msgText, msgType);
   }
 
-  return { register };
+  async function login(user) {
+    let msgText = 'Login realizado com sucesso!';
+    let msgType = 'success';
+
+    try {
+      const data = await api.post('/users/login', user).then((response) => {
+        return response.data;
+      });
+
+      await authUser(data);
+    } catch (error) {
+      msgText = error.response.data.message;
+      msgType = 'error';
+    }
+
+    navigate('/');
+
+    setFlashMessage(msgText, msgType);
+  }
+
+  async function logout() {
+    let msgText = 'Logout realizado com sucesso!';
+    let msgType = 'success';
+
+    setAuthenticated(false);
+
+    localStorage.removeItem('getapet-token');
+
+    api.defaults.headers.Authorization = undefined;
+
+    navigate('/');
+
+    setFlashMessage(msgText, msgType);
+  }
+
+  async function authUser(data) {
+    setAuthenticated(true);
+
+    localStorage.setItem('getapet-token', JSON.stringify(data.token));
+
+    navigate('/');
+  }
+
+  return { authenticated, register, login, logout };
 }
