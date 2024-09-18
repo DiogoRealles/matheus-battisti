@@ -3,11 +3,73 @@ import styles from './Dashboard.module.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import RoundedImage from '../../layouts/RoundedImage';
+import useFlashMessage from '../../../hooks/useFlashMessage';
+
+import api from '../../../utils/api';
 
 const MyPets = () => {
   const [pets, setPets] = useState([]);
+  const [token] = useState(localStorage.getItem('getapet-token') || '');
+  const { setFlashMessage } = useFlashMessage();
 
-  // useEffect(() => {}, [])
+  useEffect(() => {
+    api
+      .get('/pets/mypets', {
+        headers: {
+          Authorization: `Bearer: ${JSON.parse(token)}`,
+        },
+      })
+      .then((response) => {
+        setPets(response.data.pets);
+      });
+  }, [token]);
+
+  async function removePet(id) {
+    let msgType = 'success';
+
+    const data = await api
+      .delete(`/pets/${id}`, {
+        headers: {
+          Authorization: `Bearer: ${JSON.parse(token)}`,
+        },
+      })
+      .then((response) => {
+        const updatedPets = pets.filter((pet) => pet._id !== id);
+
+        setPets(updatedPets);
+
+        return response.data;
+      })
+      .catch((error) => {
+        msgType = 'error';
+
+        return error.response.data;
+      });
+
+    setFlashMessage(data.message, msgType);
+  }
+
+  async function concludeAdoption(id) {
+    let msgType = 'success';
+
+    const data = await api
+      .patch(`/pets/conclude/${id}`, {
+        headers: {
+          Authorization: `Bearer: ${JSON.parse(token)}`,
+        },
+      })
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        msgType = 'error';
+
+        return error.response.data;
+      });
+
+    setFlashMessage(data.message, msgType);
+  }
 
   return (
     <section>
@@ -17,7 +79,44 @@ const MyPets = () => {
       </div>
 
       <div className={styles.petslist_container}>
-        {pets.length > 0 && <p>Meus Pets cadastrados</p>}
+        {pets.length > 0 &&
+          pets.map((pet) => (
+            <div key={pet._id} className={styles.petlist_row}>
+              <RoundedImage
+                src={`${import.meta.env.VITE_APP_API}/imgs/pets/${
+                  pet.images[0]
+                }`}
+                alt={pet.name}
+                width="px75"
+              />
+              <span className="bold">{pet.name}</span>
+              <div className={styles.actions}>
+                {pet.available ? (
+                  <>
+                    {pet.adopter && (
+                      <button
+                        className={styles.conclude_btn}
+                        onClick={() => concludeAdoption(pet._id)}
+                      >
+                        Concluir adoção
+                      </button>
+                    )}
+                    <Link to={`/pet/edit/${pet._id}`}>Editar</Link>
+                    <button
+                      onClick={() => {
+                        removePet(pet._id);
+                      }}
+                    >
+                      Excluir
+                    </button>
+                  </>
+                ) : (
+                  <p>Pet Já adotado</p>
+                )}
+              </div>
+            </div>
+          ))}
+
         {pets.length === 0 && <p>Não há Pets cadastrados!</p>}
       </div>
     </section>
